@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fitness Coaching</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+
+    <header>
+        <!--navbar section-->
+        <nav class="navbar navbar-expand-lg fixed-top"> <!--fixed-top added-->
+            <div class="container">
+              <div class="dumbbell me-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="25" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f15d44" d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/></svg>
+              </div>
+            
+              <a class="navbar-brand" href="#">Fitness Coaching Platform</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><!--you can put your icon here --></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!--me =>margin left so change it to ms (margin start)-->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#exercises">Exercises</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+  
+        <!--hero section-->
+        <section>
+            <div class="hero-section vh-100 d-flex justify-content-center align-items-center" id="home">
+                <div class="container">
+                  <div class="hero-text w-50 d-flex flex-column justify-content-center gap-4">
+                          <h1>Fitness Coaching Platform</h1>
+                          <p>Transforming wellness with Technology</p>
+                          <button type="button " class="btn primary-btn w-50">Join Us Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </header>
+
+    <main>
+        <!--carousel-section-->
+        <section>
+            <div class="container mt-5 text-center">
+                <div class="carousel-title">
+                    <h2>Stay Motivated !!</h2>
+                </div>
+                <div class="carousel-body">
+                    <div id="carouselExampleCaptions" class="carousel slide mt-5 vh-100">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner h-100">
+    
+    
+                          <div class="carousel-item active h-100" style="background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('./assets/img/carousel1.jpg');">
+                            <div class="carousel-caption h-100 d-flex justify-content-center align-items-center">
+                              <div class="carousel-box">
+                                <h2>Push Yourself!!</h2>
+                                <p>Push yourself because no one else is going to do it for you.</p>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="carousel-item h-100" style="background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('./assets/img/carousel2.jpg');">
+                            <div class="carousel-caption h-100 d-flex justify-content-center align-items-center">
+                              <div class="carousel-box">
+                                <h2>Stronger Every Day!!</h2>
+                                <p>Strength doesn’t come from what you can do. It comes from overcoming the things you once thought you couldn’t</p>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="carousel-item h-100" style="background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('./assets/img/carousel3.jpg');">
+                            <div class="carousel-caption h-100 d-flex justify-content-center align-items-center">
+                              <div class="carousel-box">
+                                <h2>No Excuses!!</h2>
+                                <p>The pain you feel today will be the strength you feel tomorrow.</p>
+                              </div>
+                            </div>
+                          </div>
+    
+    
+    
+                    
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!--about section-->
+        <section>
+           <div class="container">
+            <div class="about mt-5 d-flex gap-5 w-100">
+                <div class="about-img w-50">
+                    <img src="./assets/img/about.webp" class="w-100"/>
+                </div>
+                <div class="about-info d-flex flex-column justify-content-center align-items-center text-center">
+                    <h2>Story About Us</h2>
+                    <p>we believe fitness should be personalized and accessible for everyone. Our platform combines expert coaching with smart technology to
+                        provide tailored workout plans and nutritional guidance, no matter your fitness level. Whether you're just starting out or looking to
+                        take your fitness to the next level, we're here to support your journey with customized solutions and ongoing motivation. Transform
+                        your health and wellness with us!
+                    </p>
+                    <button type="button " class="btn primary-btn">Read More</button>
+                </div>
+            </div>
+           </div>
+        </section>
+
+      <!-- Service Section -->
+       <section class="services mt-5" id="services">
+       <div class="container">
+      <h1 class="text-center mb-5">Our Services</h1>
+      <div class="row">
+        <!-- BMI Calculator -->
+        <div class="col-md-4 vh-50">
+          <div class="card text-center d-flex flex-column justify-content-center gap-3">
+            <div class="card-img">
+              <img src="./assets/img/bmiCalc.jpeg" class="card-img-top" alt="BMI Calculator">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">BMI Calculator</h2>
+              <p class="card-text">Calculate your Body Mass Index to see if you're in a healthy range.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bmiModal">Calculate BMI</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Calorie Calculator -->
+        <div class="col-md-4 vh-50">
+          <div class="card text-center d-flex flex-column justify-content-center gap-3">
+            <div class="card-img">
+              <img src="./assets/img/caloriesCalc.jpeg" class="card-img-top" alt="Calorie Calculator">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Calories Calculator</h2>
+              <p class="card-text">Find out how many calories you should eat to achieve your fitness goals.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calorieModal">Calculate Calories</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Macro Calculator -->
+        <div class="col-md-4 vh-50">
+          <div class="card text-center d-flex flex-column justify-content-center gap-3">
+            <div class="card-img">
+              <img src="./assets/img/macrosCalc.jpeg" class="card-img-top" alt="Macro Calculator">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Macro Calculator</h2>
+              <p class="card-text">Determine the ideal macronutrient ratio for your diet.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#macroModal">Calculate Macros</button>
+            </div>
+          </div>
+        </div>
+      </div>
+       </div>
+
+    <!-- Modals -->
+  <!-- BMI Modal -->
+  <div class="modal fade" id="bmiModal" tabindex="-1" aria-labelledby="bmiModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bmiModalLabel">BMI Calculator</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="bmiForm">
+            <div class="mb-3">
+              <label for="bmiWeight" class="form-label">Weight (kg)</label>
+              <input type="number" class="form-control" id="bmiWeight" required>
+            </div>
+            <div class="mb-3">
+              <label for="bmiHeight" class="form-label">Height (cm)</label>
+              <input type="number" class="form-control" id="bmiHeight" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+          </form>
+          <p class="mt-3" id="bmiResult"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Calorie Modal -->
+  <div class="modal fade" id="calorieModal" tabindex="-1" aria-labelledby="calorieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="calorieModalLabel">Calorie Calculator</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="calorieForm">
+            <div class="mb-3">
+              <label for="calorieWeight" class="form-label">Weight (kg)</label>
+              <input type="number" class="form-control" id="calorieWeight" required>
+            </div>
+            <div class="mb-3">
+              <label for="calorieHeight" class="form-label">Height (cm)</label>
+              <input type="number" class="form-control" id="calorieHeight" required>
+            </div>
+            <div class="mb-3">
+              <label for="calorieAge" class="form-label">Age</label>
+              <input type="number" class="form-control" id="calorieAge" required>
+            </div>
+            <div class="mb-3">
+              <label for="activityLevel" class="form-label">Activity Level</label>
+              <select class="form-select" id="activityLevel">
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Lightly Active</option>
+                <option value="1.55">Moderately Active</option>
+                <option value="1.725">Very Active</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateCalories()">Calculate Calories</button>
+          </form>
+          <p class="mt-3" id="calorieResult"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Macro Modal -->
+  <div class="modal fade" id="macroModal" tabindex="-1" aria-labelledby="macroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="macroModalLabel">Macro Calculator</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="macroForm">
+            <div class="mb-3">
+              <label for="macroWeight" class="form-label">Weight (kg)</label>
+              <input type="number" class="form-control" id="macroWeight" required>
+            </div>
+            <div class="mb-3">
+              <label for="macroHeight" class="form-label">Height (cm)</label>
+              <input type="number" class="form-control" id="macroHeight" required>
+            </div>
+            <div class="mb-3">
+              <label for="macroGoal" class="form-label">Goal</label>
+              <select class="form-select" id="macroGoal">
+                <option value="maintenance">Maintenance</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="fat-loss">Fat Loss</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateMacros()">Calculate Macros</button>
+          </form>
+          <p class="mt-3" id="macroResult"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+       </section>
+
+       <!--exercises-->
+       <section class="exercises mt-5" id="exercises">
+        <div class="container">
+          <div class="exercises-title text-center">
+            <h2>Exercises Library</h2>
+            <p>Click on each muscle group to discover exercises that will help you build and tone your body efficiently.</p>
+          </div>
+
+          <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-upper-tab" data-bs-toggle="pill" data-bs-target="#pills-upper" type="button" role="tab" aria-controls="pills-upper" aria-selected="false">Upper Body</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-lower-tab" data-bs-toggle="pill" data-bs-target="#pills-lower" type="button" role="tab" aria-controls="pills-lower" aria-selected="false">Lower Body</button>
+                </li>
+            </ul>
+      
+          <div class="tab-content" id="pills-tabContent">
+             <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
+                <div class="row g-3 d-flex">
+                </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade" id="pills-upper" role="tabpanel" aria-labelledby="pills-upper-tab" tabindex="0">
+               <div class="row g-3 d-flex">
+               </div>
+           </div>
+         </div>
+
+         <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade" id="pills-lower" role="tabpanel" aria-labelledby="pills-lower-tab" tabindex="0">
+               <div class="row g-3 d-flex">
+               </div>
+           </div>
+         </div>
+        </div>
+
+       </section>
+  
+  
+    </main>
+
+    <footer>
+
+        <!-- Contact Section -->
+        <section class="contact mt-5 mb-5" id="contact" >
+          <div class="container d-flex flex-column justify-content-center align-items-center gap-3">
+            <div class="cotact-title">
+                <h2 class="text-uppercase fw-bold text-main">Contact Us</h2>
+            </div>
+
+            <div class="contact-box">
+                <div class="title-para text-center">
+                    <p>Have any questions or need assistance? Feel free to reach out to us! Whether you're looking for more information about our services or need help with something specific, we're here to help. Contact us by phone, email, 
+                      or visit us at our location. We'd love to hear from you!</p>
+                  </div>
+        
+                  <div class="contact-info">
+                    <div class="row">
+                      <!-- Location -->
+                      <div class="col-md-4 ">
+                  <div class="location d-flex flex-column align-items-center">
+                    <div class="logo-and-name d-flex gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="mt-2" height="20" width="20" viewBox="0 0 384 512"><path fill="#f15d44" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                      <h3>Location</h3>
+                    </div>
+                    <address>Taybeh-Ramallah</address>
+                  </div>
+                      </div>
+        
+                <!-- Phone -->
+                <div class="col-md-4">
+                  <div class="phone d-flex flex-column align-items-center">
+                    <div class="logo-and-name d-flex gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="mt-2" height="20" width="20" viewBox="0 0 512 512"><<path fill="#f15d44" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                      <h3>Phone</h3>
+                    </div>
+                    <p>+972-0569999999</p>
+                  </div>
+                </div>
+        
+                <!-- Email -->
+                <div class="col-md-4">
+                  <div class="email d-flex flex-column align-items-center">
+                    <div class="logo-and-name d-flex gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="mt-2" height="20" width="20" viewBox="0 0 512 512"><path fill="#f15d44" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                      <h3>Email</h3>
+                    </div>
+                    <p>fitnessc@gmail.com</p>
+                  </div>
+                </div>
+                    </div>
+                  </div>
+        
+            <!-- Google Map Integration -->
+                  <div class="map mt-5">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13540.407726591133!2d35.28818324964315!3d31.958131289823122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cd6b20b6e7627%3A0xb1c21e6d63f548d0!2z2KfZhNi32YrYqNip!5e0!3m2!1sen!2s!4v1729429078305!5m2!1sen!2s" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+            </div>
+          </div>
+        </section>
+  
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
