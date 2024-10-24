@@ -181,7 +181,86 @@ document.querySelector('#macroModal button.btn-primary').addEventListener('click
   });
 
 
+// Water Intake Calculation
+document.querySelector('#waterModal button.btn-primary').addEventListener('click', function() {
+  const weight = document.querySelector('#waterWeight').value;
+  const activityLevel = document.querySelector('#activityLevel').value;
+
+  if (weight && weight > 0 && activityLevel) {
+    const waterIntake = weight * activityLevel * 30; // Water intake in milliliters
+    const waterIntakeLiters = (waterIntake / 1000).toFixed(2); // Convert to liters and round to 2 decimal places
+    document.querySelector('#waterResult').textContent = `You should drink approximately ${waterIntakeLiters} liters of water daily.`;
+  } else {
+    document.querySelector('#waterResult').textContent = 'Please enter valid values.';
+  }
+});
 
 
 
 
+
+document.querySelector('#bodyFatModal button.btn-primary').addEventListener('click', function() {
+  const weight = document.querySelector('#bodyFatWeight').value;
+  const waist = document.querySelector('#bodyFatWaist').value;
+  const neck = document.querySelector('#bodyFatNeck').value;
+  const gender = document.querySelector('#bodyFatGender').value;
+  const hip = document.querySelector('#bodyFatHip').value;
+
+  let bodyFat = 0;
+
+  if (gender === 'male') {
+    // Body Fat Percentage Calculation for Men (US Navy Method)
+    if (waist && neck && weight) {
+      bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(weight)) - 450;
+    } else {
+      document.querySelector('#bodyFatResult').textContent = 'Please enter valid values.';
+      return;
+    }
+  } else if (gender === 'female') {
+    // Body Fat Percentage Calculation for Women (US Navy Method)
+    if (waist && neck && hip && weight) {
+      bodyFat = 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(weight)) - 450;
+    } else {
+      document.querySelector('#bodyFatResult').textContent = 'Please enter valid values.';
+      return;
+    }
+  }
+
+  if (bodyFat) {
+    document.querySelector('#bodyFatResult').textContent = `Your estimated body fat percentage is ${bodyFat.toFixed(2)}%.`;
+  } else {
+    document.querySelector('#bodyFatResult').textContent = 'Please enter valid values.';
+  }
+});
+
+// Show/Hide Hip Input for Females
+document.querySelector('#bodyFatGender').addEventListener('change', function() {
+  const gender = this.value;
+  const hipContainer = document.querySelector('#bodyFatHipContainer');
+  
+  if (gender === 'female') {
+    hipContainer.style.display = 'block';
+  } else {
+    hipContainer.style.display = 'none';
+  }
+});
+
+
+document.querySelector('#muscleMassModal button.btn-primary').addEventListener('click', function() {
+  const weight = document.querySelector('#muscleWeight').value;
+  const bodyFatPercentage = document.querySelector('#muscleBodyFat').value;
+  const height = document.querySelector('#muscleHeight').value;
+
+  if (weight && bodyFatPercentage && height) {
+    // Calculate Lean Body Mass (LBM)
+    const fatMass = (bodyFatPercentage / 100) * weight;
+    const leanBodyMass = weight - fatMass;
+
+    // Estimate Muscle Mass (using an approximation of 35-50% of LBM for most people)
+    const muscleMass = leanBodyMass * 0.45; // Assume 45% of LBM is muscle mass
+
+    document.querySelector('#muscleMassResult').textContent = `Your estimated muscle mass is approximately ${muscleMass.toFixed(2)} kg.`;
+  } else {
+    document.querySelector('#muscleMassResult').textContent = 'Please enter valid values.';
+  }
+});

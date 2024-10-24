@@ -140,7 +140,7 @@
        <section class="services mt-5" id="services">
        <div class="container">
       <h1 class="text-center mb-5">Our Services</h1>
-      <div class="row">
+      <div class="row g-3">
         <!-- BMI Calculator -->
         <div class="col-md-4 vh-50">
           <div class="card text-center d-flex flex-column justify-content-center gap-3">
@@ -182,6 +182,50 @@
             </div>
           </div>
         </div>
+
+        <!-- Water Intake Calculator -->
+         <div class="col-md-4 vh-50">
+           <div class="card text-center d-flex flex-column justify-content-center gap-3">
+           <div class="card-img">
+           <img src="./assets/img/waterCalc.jpeg" class="card-img-top" alt="Water Intake Calculator">
+           </div>
+           <div class="card-body">
+            <h2 class="card-title">Water Intake Calculator</h2>
+            <p class="card-text">Find out how much water you should drink daily to stay hydrated.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#waterModal">Calculate Water Intake</button>
+           </div>
+           </div>
+         </div>
+
+         <!-- Body Fat Percentage Calculator -->
+        <div class="col-md-4 vh-50">
+  <div class="card text-center d-flex flex-column justify-content-center gap-3">
+    <div class="card-img">
+      <img src="./assets/img/bodyFatCalc.jpeg" class="card-img-top" alt="Body Fat Percentage Calculator">
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">Body Fat Percentage Calculator</h2>
+      <p class="card-text">Estimate your body fat percentage based on your measurements.</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bodyFatModal">Calculate Body Fat</button>
+    </div>
+  </div>
+        </div>
+
+        <!-- Muscle Mass Estimation-->
+        <div class="col-md-4 vh-50">
+  <div class="card text-center d-flex flex-column justify-content-center gap-3">
+    <div class="card-img">
+      <img src="./assets/img/musclesClac.png" class="card-img-top" alt="Muscle Mass Estimation">
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">Muscle Mass Estimation</h2>
+      <p class="card-text">Estimate your muscle mass based on your weight, height, and body fat percentage.</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#muscleMassModal">Calculate Muscle Mass</button>
+    </div>
+  </div>
+        </div>
+
+
       </div>
        </div>
 
@@ -204,7 +248,7 @@
               <label for="bmiHeight" class="form-label">Height (cm)</label>
               <input type="number" class="form-control" id="bmiHeight" required>
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+            <button type="button" class="btn btn-primary">Calculate BMI</button>
           </form>
           <p class="mt-3" id="bmiResult"></p>
         </div>
@@ -243,7 +287,7 @@
                 <option value="1.725">Very Active</option>
               </select>
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculateCalories()">Calculate Calories</button>
+            <button type="button" class="btn btn-primary">Calculate Calories</button>
           </form>
           <p class="mt-3" id="calorieResult"></p>
         </div>
@@ -277,13 +321,120 @@
                 <option value="fat-loss">Fat Loss</option>
               </select>
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculateMacros()">Calculate Macros</button>
+            <button type="button" class="btn btn-primary" >Calculate Macros</button>
           </form>
           <p class="mt-3" id="macroResult"></p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Water Intake Modal -->
+<div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="waterModalLabel">Water Intake Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="waterForm">
+          <div class="mb-3">
+            <label for="waterWeight" class="form-label">Weight (kg)</label>
+            <input type="number" class="form-control" id="waterWeight" required>
+          </div>
+          <div class="mb-3">
+            <label for="activityLevel" class="form-label">Activity Level</label>
+            <select class="form-select" id="activityLevel" required>
+              <option value="1.2">Sedentary (little or no exercise)</option>
+              <option value="1.4">Lightly Active (light exercise)</option>
+              <option value="1.6">Active (moderate exercise)</option>
+              <option value="1.8">Very Active (intense exercise)</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary">Calculate Water Intake</button>
+        </form>
+        <p class="mt-3" id="waterResult"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Body Fat Percentage Modal -->
+<div class="modal fade" id="bodyFatModal" tabindex="-1" aria-labelledby="bodyFatModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bodyFatModalLabel">Body Fat Percentage Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bodyFatForm">
+          <div class="mb-3">
+            <label for="bodyFatWeight" class="form-label">Weight (kg)</label>
+            <input type="number" class="form-control" id="bodyFatWeight" required>
+          </div>
+          <div class="mb-3">
+            <label for="bodyFatWaist" class="form-label">Waist Circumference (cm)</label>
+            <input type="number" class="form-control" id="bodyFatWaist" required>
+          </div>
+          <div class="mb-3">
+            <label for="bodyFatNeck" class="form-label">Neck Circumference (cm)</label>
+            <input type="number" class="form-control" id="bodyFatNeck" required>
+          </div>
+          <div class="mb-3">
+            <label for="bodyFatGender" class="form-label">Gender</label>
+            <select class="form-select" id="bodyFatGender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="mb-3" id="bodyFatHipContainer" style="display: none;">
+            <label for="bodyFatHip" class="form-label">Hip Circumference (cm) (Female only)</label>
+            <input type="number" class="form-control" id="bodyFatHip">
+          </div>
+          <button type="button" class="btn btn-primary">Calculate Body Fat Percentage</button>
+        </form>
+        <p class="mt-3" id="bodyFatResult"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Muscle Mass Estimation Modal -->
+<div class="modal fade" id="muscleMassModal" tabindex="-1" aria-labelledby="muscleMassModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="muscleMassModalLabel">Muscle Mass Estimation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="muscleMassForm">
+          <div class="mb-3">
+            <label for="muscleWeight" class="form-label">Weight (kg)</label>
+            <input type="number" class="form-control" id="muscleWeight" required>
+          </div>
+          <div class="mb-3">
+            <label for="muscleHeight" class="form-label">Height (cm)</label>
+            <input type="number" class="form-control" id="muscleHeight" required>
+          </div>
+          <div class="mb-3">
+            <label for="muscleBodyFat" class="form-label">Body Fat Percentage (%)</label>
+            <input type="number" class="form-control" id="muscleBodyFat" required>
+          </div>
+          <button type="button" class="btn btn-primary" id="calculateMuscleMass">Calculate Muscle Mass</button>
+        </form>
+        <p class="mt-3" id="muscleMassResult"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
        </section>
 
        <!--exercises-->
